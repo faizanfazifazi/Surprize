@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Wife Day</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript function for countdown
+        function startCountdown() {
+            let countdown = 10;
+            const countdownElement = document.getElementById('countdown');
+            const container = document.querySelector('.container');
+
+            const interval = setInterval(function() {
+                if (countdown > 0) {
+                    countdownElement.textContent = countdown;
+                    countdown--;
+                } else {
+                    clearInterval(interval);
+                    countdownElement.style.display = 'none'; // Hide countdown
+                    container.style.display = 'block'; // Show the surprise message
+                }
+            }, 1000); // 1-second interval
+        }
+
+        window.onload = startCountdown;
+    </script>
+</head>
+<body>
+    <!-- Countdown Display -->
+    <div id="countdown" class="countdown"></div>
+
+    <!-- Surprise Content -->
+    <div class="container" style="display:none;">
+        <h1>Happy Wife Day</h1>
+        
+        <!-- Image Section -->
+        <img src="WhatsApp Image 2024-09-15 at 11.07.07_142f0b13.jpg" alt="Lovely Wife" class="wife-img">
+        
+        <!-- Video Section -->
+        <video class="wife-video" controls>
+            <source src="WhatsApp Video 2024-09-15 at 11.12.24_9cfb04ab.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Lovely Message -->
+        <p class="message">To the love of my life, my world is brighter with you in it. Every moment with you is a blessing. I love you endlessly! ❤️</p>
+    </div>
+</body>
+</html>
